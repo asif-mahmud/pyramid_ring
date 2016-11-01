@@ -38,11 +38,11 @@ A Pyramid scaffold that includes -
 
 ##Project Structure
 
-**#** - _Stands for Folder_
-**+** - _Stands for File_
-_All `__init__.py`'s are ignored._
-_All `README.md`'s are ignored._
-_Learn more about the purpose of the folders in their `README.md` file._
+- **#** - _Stands for Folder_
+- **+** - _Stands for File_
+- _All `__init__.py`'s are ignored._
+- _All `README.md`'s are ignored._
+- _Learn more about the purpose of the folders in their `README.md` file._
 
 ```
  # project_name
