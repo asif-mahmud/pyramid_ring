@@ -6,28 +6,32 @@ VENV_PATH='/your/project/venv/root'
 
 
 setup:
-	cd $(PROJECT_PATH)
-	$(VENV_PATH)/bin/pip install -e .
-	cd $PROJECT_PATH/$PROJECT_NAME/ngsrc && npm install
-	cd $PROJECT_PATH/$PROJECT_NAME/ngsrc/semantic && gulp build
+	cd ${PROJECT_PATH}
+	${VENV_PATH}/bin/pip install -e .
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm install
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc/semantic && gulp build
 
 tsc:
-	cd $PROJECT_PATH/$PROJECT_NAME/ngsrc && npm run tsc
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc
+	npm run tsc
 
 tscw:
-	cd $PROJECT_PATH/$PROJECT_NAME/ngsrc && npm run tscw
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc
+	npm run tscw
 
 revision:
-	echo -n 'What did you add ? '
-	read MSG
-	cd $PROJECT_PATH && alembic revision --autogenerate -m "$MSG"
+	@read -p "What did you add? " MSG && \
+	cd ${PROJECT_PATH} &&\
+	${VENV_PATH}/bin/alembic revision --autogenerate -m "$$MSG"
 
 upgrade:
-	cd $PROJECT_PATH && alembic upgrade head
+	cd ${PROJECT_PATH}
+	${VENV_PATH}/bin/alembic upgrade head
 
 downgrade:
-	cd $PROJECT_PATH && alembic downgrade -1
+	cd ${PROJECT_PATH}
+	${VENV_PATH}/bin/alembic downgrade -1
 
 run:
-	cd $PROJECT_PATH
-	$VENV_PATH/bin/pserve development.ini
+	cd ${PROJECT_PATH}
+	${VENV_PATH}/bin/pserve development.ini

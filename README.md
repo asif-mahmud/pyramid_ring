@@ -18,6 +18,7 @@ A Pyramid scaffold that includes -
 * Saves hours of google search and typing.
 * Start with the best tools configured to work together.
 * Open source and free.
+* IDE (i.o PyCharm) friendly.
 * One configuration file per environment(i.e development and production).
 * A simple **Makefile** to make life even easier(See the usage of the Makefile).
 * A built-in `ModelBase` for **SQLAlchemy** (See features of the `ModelBase`).
