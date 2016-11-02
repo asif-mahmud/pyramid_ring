@@ -1,0 +1,2 @@
+graft pyramid_ring
+include *.txt *.ini *.rst *.md
