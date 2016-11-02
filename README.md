@@ -1,5 +1,7 @@
 #pyramid_ring
 
+![Image not found](images/pyramid_ring.png)
+
 A Pyramid scaffold that includes -
 
 1. [Pyramid](http://www.pylonsproject.org/) itself
