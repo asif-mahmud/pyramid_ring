@@ -78,7 +78,7 @@ A Pyramid scaffold that includes -
  |-+ Makefile - Provides some useful shortcut commands.
 ```
 
-##Usage of Makefile
+##Usage of Makefile 
 
 The `Makefile` inside the `project folder` provides some easy shortcut commands-
 
