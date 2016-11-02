@@ -1,4 +1,5 @@
 from pyramid.scaffolds import PyramidTemplate
+import sys
 
 
 class PyramidRingProjectTemplate(PyramidTemplate):
@@ -7,3 +8,8 @@ class PyramidRingProjectTemplate(PyramidTemplate):
     """
     _template_dir = 'pyramid_ring'
     summary = 'Pyramid Ring Project Scaffold'
+
+    def pre(self, command, output_dir, vars):
+        vars['project_path'] = output_dir
+        vars['project_venv'] = sys.prefix
+        return PyramidTemplate.pre(self, command, output_dir, vars)

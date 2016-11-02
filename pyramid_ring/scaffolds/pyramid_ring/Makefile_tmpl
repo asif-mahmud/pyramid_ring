@@ -1,8 +1,8 @@
 #!/bin/bash
 # Yet to be implemented
 PROJECT_NAME={{project}}
-PROJECT_PATH='/your/project/root/directory'
-VENV_PATH='/your/project/venv/root'
+PROJECT_PATH={{project_path}}
+VENV_PATH={{project_venv}}
 
 
 setup:

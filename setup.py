@@ -5,7 +5,7 @@ from setuptools import setup
 here = os.path.abspath(os.path.dirname(__file__))
 
 setup(name='pyramid_ring',
-      version='1.0.2',
+      version='1.2.0',
       author='Asif Mahmud Shimon',
       email='ams.eee09@gmail.com',
       packages=find_packages(),

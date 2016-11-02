@@ -43,7 +43,7 @@ A Pyramid scaffold that includes -
 
 - **#** - _Stands for Folder_
 - **+** - _Stands for File_
-- _All `__init__.py`'s are ignored._
+- _All `__init__.py` are ignored._
 - _All `README.md`'s are ignored._
 - _Learn more about the purpose of the folders in their `README.md` file._
 
@@ -92,6 +92,9 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 - `make run` : Run `pserve` to serve local server.
 
 ###Notes
+
+`Updated in Version 1.2.0`: Setting the `Makefile` variables are done automatically. Just run `pcreate` from your 
+`python virtual environment`.
 
 Change the following variables to suite your project. `TODO:` Can this be automated ?
 
