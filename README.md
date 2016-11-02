@@ -49,10 +49,11 @@ A Pyramid scaffold that includes -
 ```
  # project_name
  |
+ |-# database
+ |
  |-# project_name
  | |
  | |-# models
- | |-# database
  | |-# static
  | |-# basetemplates
  | |-# views
@@ -89,7 +90,13 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 - `make downgrade` : Migrate your database to a previous revision.
 - `make run` : Run `pserve` to serve local server.
 
-_(Please change the VENV_PATH variable in the Makefile first to point to the absolute or relative path to the virtual environment.)_
+###Notes
+
+Change the following variables to suite your project. `TODO:` Can this be automated ?
+
+- PROJECT_NAME : Project name
+- VENV_PATH : Points to the absolute or relative path to the virtual environment.
+- PROJECT_PATH : Points to the absolute project root folder.
 
 ##Features of `ModelBase`
 
