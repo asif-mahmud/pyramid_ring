@@ -41,11 +41,11 @@ A Pyramid scaffold that includes -
 
 ##Project Structure
 
-- **#** - _Stands for Folder_
-- **+** - _Stands for File_
-- _All `__init__.py` are ignored._
-- _All `README.md`'s are ignored._
-- _Learn more about the purpose of the folders in their `README.md` file._
+- **#** - Stands for Folder.
+- **+** - Stands for File.
+- All `__init__.py` are ignored.
+- All `README.md`'s are ignored.
+- Learn more about the purpose of the folders in their `README.md` file.
 
 ```
  # project_name
@@ -111,3 +111,15 @@ inherit the infamous `Base` class. It provides the following class level attribu
 - `created_on` : A `DateTime Column` to provide when the entry was created. Defaults to current time.
 - `updated_on` : A `DateTime Column` to provide when the entry was updated. Always the last update time.
 - `__tablename__` : You don't have to write `__tablename__` whenver you create a `Model`
+
+##Version History
+
+###Version 1.2.0
+
+* Makefile variable fix
+* `ModelBase.updated_on` column now has `default` value.
+
+###Version 1.0.0
+
+* First Version
+* Includes Pyramid, SQLAlchemy, Jinja2, Angular2, Semantic UI

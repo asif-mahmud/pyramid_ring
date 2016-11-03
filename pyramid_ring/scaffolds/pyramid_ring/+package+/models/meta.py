@@ -25,7 +25,7 @@ class ModelBase(object):
 
     id = Column(Integer, primary_key=True)
     created_on = Column(DateTime, server_default=func.now())
-    updated_on = Column(DateTime, server_onupdate=func.now())
+    updated_on = Column(DateTime, server_default=func.now(), server_onupdate=func.now())
 
     @declared_attr
     def __tablename__(cls):
