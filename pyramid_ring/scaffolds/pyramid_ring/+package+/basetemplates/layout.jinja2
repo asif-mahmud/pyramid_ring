@@ -13,17 +13,28 @@
     <script src="/ngmodules/zone.js/dist/zone.js"></script>
     <script src="/ngmodules/reflect-metadata/Reflect.js"></script>
     <script src="/ngmodules/systemjs/dist/system.src.js"></script>
+    <script src="/ngsrc/systemjs.config.js"></script>
+    <script src="/ngmodules/jquery/dist/jquery.min.js"></script>
+    <script src="/semantic/semantic.min.js"></script>
 
     {% block JsFiles %}{% endblock %}
+    {% block JsScripts %}{% endblock %}
 
-    <link rel="stylesheet" href="/ngsrc/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="/semantic/semantic.min.css">
 
     {% block CssFiles %}{% endblock %}
   </head>
 
   <body>
 
-    {% block PageContent %}{% endblock %}
+    <div class="ui inverted sidebar vertical menu">
+        {% block MobilePageNavigation %}{% endblock %}
+    </div>
+
+    <div class="pusher" style="padding-top: 70px;">
+        {% block ComputerPageNavigation %}{% endblock %}
+        {% block PageContent %}{% endblock %}
+    </div>
 
     <!-- 2. Configure SystemJS -->
     <!-- script src="systemjs.config.js"></script>

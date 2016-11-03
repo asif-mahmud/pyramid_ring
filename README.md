@@ -10,6 +10,7 @@ A Pyramid scaffold that includes -
 4. [Semantic UI](http://semantic-ui.com/)
 5. [Alembic](http://alembic.zzzcomputing.com/)
 6. [Jinja2](http://jinja.pocoo.org/docs/dev/)
+7. [JQuery](https://jquery.com/)
 
 ##Key Features
 
@@ -90,6 +91,7 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 - `make upgrade` : Migrate your database to latest revision.
 - `make downgrade` : Migrate your database to a previous revision.
 - `make run` : Run `pserve` to serve local server.
+- `make csswatch` : Run `gulp watch` to build css files if any change occurs.
 
 ###Notes
 
@@ -114,10 +116,18 @@ inherit the infamous `Base` class. It provides the following class level attribu
 
 ##Version History
 
+###Version 1.3.0
+* Added jQuery
+* A default responsive navigation bar added with mobile only sidebar
+* Added `gulp watch` to `Makefile` command
+* Added more blocks to `layout.jinja2`
+* Navigation bar is implemented in `layout-with-nav.jinja2`
+
 ###Version 1.2.0
 
 * Makefile variable fix
 * `ModelBase.updated_on` column now has `default` value.
+* Angular modules path fix
 
 ###Version 1.0.0
 

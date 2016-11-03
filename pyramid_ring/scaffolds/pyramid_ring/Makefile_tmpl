@@ -35,3 +35,6 @@ downgrade:
 run:
 	cd ${PROJECT_PATH}
 	${VENV_PATH}/bin/pserve development.ini
+
+csswatch:
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc/semantic && gulp watch

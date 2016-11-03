@@ -1,0 +1,28 @@
+{% extends './layout.jinja2' %}
+
+{% block JsScripts %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.ui.sidebar').sidebar('attach events', '#right-sidebar-toggler');
+    });
+</script>
+{% endblock %}
+
+{% block MobilePageNavigation %}
+<a class="item" href="{{ request.route_url('home') }}"><i class="home icon"></i> {{ 'home'|upper }}</a>
+{% endblock %}
+
+{% block ComputerPageNavigation %}
+<div class="ui grid">
+    <div class="tablet computer only row">
+        <div class="ui top fixed menu">
+            <a class="right aligned item" href="{{ request.route_url('home') }}"><i class="home icon"></i> {{ 'home'|upper }}</a>
+        </div>
+    </div>
+    <div class="mobile only row">
+        <div class="ui top fixed menu">
+            <button id="right-sidebar-toggler" class="ui button item"><i class="list layout icon"></i>Menu</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
