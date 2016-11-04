@@ -116,6 +116,9 @@ inherit the infamous `Base` class. It provides the following class level attribu
 
 ##Version History
 
+###Version 1.3.1
+* Makefile fixes
+
 ###Version 1.3.0
 * Added jQuery
 * A default responsive navigation bar added with mobile only sidebar
