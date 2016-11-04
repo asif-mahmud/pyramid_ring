@@ -6,18 +6,16 @@ VENV_PATH={{project_venv}}
 
 
 setup:
-	cd ${PROJECT_PATH}
-	${VENV_PATH}/bin/pip install -e .
+    ${VENV_PATH}/bin/pip install pip --upgrade
+	${VENV_PATH}/bin/pip install -e . --upgrade
 	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm install
 	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc/semantic && gulp build
 
 tsc:
-	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc
-	npm run tsc
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm run tsc
 
 tscw:
-	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc
-	npm run tscw
+	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm run tsc:w
 
 revision:
 	@read -p "What did you add? " MSG && \

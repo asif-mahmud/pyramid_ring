@@ -6,7 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 
 setup(
     name='pyramid_ring',
-    version='1.3.0',
+    version='1.3.1',
     author='Asif Mahmud Shimon',
     email='ams.eee09@gmail.com',
     packages=find_packages(),
