@@ -116,6 +116,10 @@ inherit the infamous `Base` class. It provides the following class level attribu
 
 ##Version History
 
+###Version 1.4.0
+* Added an encrypted session factory provided by `pyramid_nacl_session` addon.
+* Added `CSRF/XSRF` token availability to angular 2 `HttpModule`
+
 ###Version 1.3.1
 * Makefile fixes
 
