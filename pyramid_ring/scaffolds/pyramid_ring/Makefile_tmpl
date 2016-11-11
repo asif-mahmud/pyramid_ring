@@ -6,8 +6,9 @@ VENV_PATH={{project_venv}}
 
 
 setup:
-    ${VENV_PATH}/bin/pip install pip --upgrade
+	${VENV_PATH}/bin/pip install pip --upgrade
 	${VENV_PATH}/bin/pip install -e . --upgrade
+	${VENV_PATH}/bin/pip install -e '.[testing]' --upgrade
 	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm install
 	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc/semantic && gulp build
 

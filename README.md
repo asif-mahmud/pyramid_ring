@@ -59,6 +59,7 @@ A Pyramid scaffold that includes -
  | |-# static
  | |-# basetemplates
  | |-# views
+ | |-# security
  | |-# ngsrc
  | |-# scripts
  | |-# tests
@@ -92,6 +93,7 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 - `make downgrade` : Migrate your database to a previous revision.
 - `make run` : Run `pserve` to serve local server.
 - `make csswatch` : Run `gulp watch` to build css files if any change occurs.
+- `make runtests` : Run `nosetests` to test the project.
 
 ###Notes
 
@@ -115,6 +117,10 @@ inherit the infamous `Base` class. It provides the following class level attribu
 - `__tablename__` : You don't have to write `__tablename__` whenver you create a `Model`
 
 ##Version History
+
+###Version 1.4.1
+* Added `nosetest` capability to `Makefile`.
+* Updated `make setup` command to install dependencies for testing.
 
 ###Version 1.4.0
 * Added an encrypted session factory provided by `pyramid_nacl_session` addon.
