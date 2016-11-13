@@ -118,6 +118,9 @@ inherit the infamous `Base` class. It provides the following class level attribu
 
 ##Version History
 
+##Version 1.4.2
+* Database table naming convention changed to `some_table_name` style.
+
 ###Version 1.4.1
 * Added `nosetest` capability to `Makefile`.
 * Updated `make setup` command to install dependencies for testing.

@@ -7,6 +7,7 @@ from sqlalchemy import (
 )
 from sqlalchemy import func
 from sqlalchemy.ext.declarative import declared_attr
+import re
 
 
 # Recommended naming convention used by Alembic, as various different database
@@ -29,7 +30,15 @@ class ModelBase(object):
 
     @declared_attr
     def __tablename__(cls):
-        return cls.__name__.lower()
+        name = cls.__name__
+        return (
+            name[0].lower() +
+            re.sub(
+                r'([A-Z])',
+                lambda m: '_' + m.group(0).lower(),
+                name[1:]
+            )
+        )
 
 
 metadata = MetaData(naming_convention=NAMING_CONVENTION)
