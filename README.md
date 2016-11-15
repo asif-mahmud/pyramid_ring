@@ -93,7 +93,7 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 - `make downgrade` : Migrate your database to a previous revision.
 - `make run` : Run `pserve` to serve local server.
 - `make csswatch` : Run `gulp watch` to build css files if any change occurs.
-- `make runtests` : Run `nosetests` to test the project.
+- `make runtests` : Run `pytest` to test the project.
 
 ###Notes
 
@@ -117,6 +117,11 @@ inherit the infamous `Base` class. It provides the following class level attribu
 - `__tablename__` : You don't have to write `__tablename__` whenver you create a `Model`
 
 ##Version History
+
+##Version 1.4.3
+* Removed `nose`
+* Using `pytest` to run tests.
+* Modified `Makefile` command to run tests.
 
 ##Version 1.4.2
 * Database table naming convention changed to `some_table_name` style.
