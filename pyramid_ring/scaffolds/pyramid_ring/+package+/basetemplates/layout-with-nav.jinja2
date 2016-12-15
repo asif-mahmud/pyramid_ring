@@ -1,28 +1,31 @@
 {% extends './layout.jinja2' %}
 
-{% block JsScripts %}
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.ui.sidebar').sidebar('attach events', '#right-sidebar-toggler');
-    });
-</script>
-{% endblock %}
+{% block PageNavigation %}
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-{% block MobilePageNavigation %}
-<a class="item" href="{{ request.route_url('home') }}"><i class="home icon"></i> {{ 'home'|upper }}</a>
-{% endblock %}
+          <a class="navbar-brand" href="#">
+              <img src="/static/logo.png" alt="" style="float: left; max-height: 42px; margin-top:-7px;">
+              <span style="font-size: 1.5em ;">Pyramid</span>
+          </a>
+        </div>
 
-{% block ComputerPageNavigation %}
-<div class="ui grid">
-    <div class="tablet computer only row">
-        <div class="ui top fixed menu">
-            <a class="right aligned item" href="{{ request.route_url('home') }}"><i class="home icon"></i> {{ 'home'|upper }}</a>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="{{ request.route_url('home') }}" data-toggle="collapse" data-target=".navbar-collapse.in">
+                        HOME
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="mobile only row">
-        <div class="ui top fixed menu">
-            <button id="right-sidebar-toggler" class="ui button item"><i class="list layout icon"></i>Menu</button>
-        </div>
-    </div>
-</div>
+</nav>
 {% endblock %}

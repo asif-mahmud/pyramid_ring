@@ -14,7 +14,8 @@ def includeme(config):
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_static_view('ngsrc', 'ngsrc', cache_max_age=3600)
     config.add_static_view('ngmodules', 'ngsrc/node_modules', cache_max_age=3600)
-    config.add_static_view('semantic', 'ngsrc/semantic/dist', cache_max_age=3600)
+    config.add_static_view('bootstrap', 'ngsrc/node_modules/bootstrap/dist', cache_max_age=3600)
+    config.add_static_view('bootstrap-select', 'ngsrc/node_modules/bootstrap-select/dist', cache_max_age=3600)
     config.add_static_view('ngapps', 'ngsrc/ngapps', cache_max_age=3600)
 
     config.add_route('home_redirect', '/')

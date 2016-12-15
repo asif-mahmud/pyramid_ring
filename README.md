@@ -7,7 +7,7 @@ A Pyramid scaffold that includes -
 1. [Pyramid](http://www.pylonsproject.org/) itself
 2. [SQLAlchemy](http://www.sqlalchemy.org/)
 3. [Angular 2](https://angular.io/)
-4. [Semantic UI](http://semantic-ui.com/)
+4. [Bootstrap](http://getbootstrap.com/)
 5. [Alembic](http://alembic.zzzcomputing.com/)
 6. [Jinja2](http://jinja.pocoo.org/docs/dev/)
 7. [JQuery](https://jquery.com/)
@@ -92,7 +92,6 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 - `make upgrade` : Migrate your database to latest revision.
 - `make downgrade` : Migrate your database to a previous revision.
 - `make run` : Run `pserve` to serve local server.
-- `make csswatch` : Run `gulp watch` to build css files if any change occurs.
 - `make runtests` : Run `pytest` to test the project.
 
 ###Notes
@@ -117,6 +116,13 @@ inherit the infamous `Base` class. It provides the following class level attribu
 - `__tablename__` : You don't have to write `__tablename__` whenver you create a `Model`
 
 ##Version History
+
+##Version 1.5.0
+* Using `bootstrap` instead of `Semantic UI`.
+* Removed `Makefile` command `csswatch`.
+* Added `bootstrap-select` for extra functionalities of html `select`.
+* Added `apple-touch-icon` and `favicon` in base template.
+* Added example code for [Google Analytics](https://analytics.google.com/) in base template.
 
 ##Version 1.4.3
 * Removed `nose`

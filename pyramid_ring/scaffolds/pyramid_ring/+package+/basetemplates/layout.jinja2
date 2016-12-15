@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{request.locale_name}}">
+<html class="no-js" lang="{{request.locale_name}}">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,30 +9,36 @@
 
     <title>{% block PageTitle %}Pyramid Ring Scaffold{% endblock %}</title>
 
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-select/css/bootstrap-select.min.css">
+
     <script src="/ngmodules/core-js/client/shim.min.js"></script>
     <script src="/ngmodules/zone.js/dist/zone.js"></script>
     <script src="/ngmodules/reflect-metadata/Reflect.js"></script>
     <script src="/ngmodules/systemjs/dist/system.src.js"></script>
     <script src="/ngsrc/systemjs.config.js"></script>
     <script src="/ngmodules/jquery/dist/jquery.min.js"></script>
-    <script src="/semantic/semantic.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-select/js/bootstrap-select.min.js"></script>
 
     {% block JsFiles %}{% endblock %}
     {% block JsScripts %}{% endblock %}
 
-    <link rel="stylesheet" href="/semantic/semantic.min.css">
-
     {% block CssFiles %}{% endblock %}
   </head>
 
-  <body>
+  <body style="padding-top: 70px;">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-    <div class="ui inverted sidebar vertical menu">
-        {% block MobilePageNavigation %}{% endblock %}
-    </div>
+    {% block PageNavigation %}{% endblock %}
 
-    <div class="pusher" style="padding-top: 70px;">
-        {% block ComputerPageNavigation %}{% endblock %}
+    <div class="container">
         {% block PageContent %}{% endblock %}
     </div>
 
@@ -41,5 +47,15 @@
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
   </body>
 </html>
