@@ -97,3 +97,4 @@ ENV/
 .idea/pyramid_ring.iml
 .idea/workspace.xml
 pyramid_ring.egg-info/
+.idea/

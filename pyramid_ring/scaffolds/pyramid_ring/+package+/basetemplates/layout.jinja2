@@ -13,34 +13,28 @@
     <link rel="shortcut icon" type="image/ico" href="/static/favicon.ico">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bootstrap-select/css/bootstrap-select.min.css">
+    {% block CssFiles %}{% endblock %}
 
     <script src="/ngmodules/core-js/client/shim.min.js"></script>
     <script src="/ngmodules/zone.js/dist/zone.js"></script>
     <script src="/ngmodules/reflect-metadata/Reflect.js"></script>
     <script src="/ngmodules/systemjs/dist/system.src.js"></script>
     <script src="/ngsrc/systemjs.config.js"></script>
-    <script src="/ngmodules/jquery/dist/jquery.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/bootstrap-select/js/bootstrap-select.min.js"></script>
 
     {% block JsFiles %}{% endblock %}
     {% block JsScripts %}{% endblock %}
 
-    {% block CssFiles %}{% endblock %}
   </head>
 
-  <body style="padding-top: 70px;">
+  <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     {% block PageNavigation %}{% endblock %}
 
-    <div class="container">
-        {% block PageContent %}{% endblock %}
-    </div>
+
+    {% block PageContent %}{% endblock %}
 
     <!-- 2. Configure SystemJS -->
     <!-- script src="systemjs.config.js"></script>

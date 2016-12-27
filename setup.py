@@ -14,6 +14,8 @@ setup(
     zip_safe=False,
     requires=[
         'pyramid',
+        'pyramid_jinja2',
+        'sqlalchemy',
     ],
     entry_points="""\
             [pyramid.scaffold]
