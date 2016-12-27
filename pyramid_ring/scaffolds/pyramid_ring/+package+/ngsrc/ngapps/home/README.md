@@ -1,1 +1,0 @@
-Just a template Angular 2 app dir.

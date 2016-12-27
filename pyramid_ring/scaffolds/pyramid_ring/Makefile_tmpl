@@ -9,13 +9,14 @@ setup:
 	${VENV_PATH}/bin/pip install pip --upgrade
 	${VENV_PATH}/bin/pip install -e . --upgrade
 	${VENV_PATH}/bin/pip install -e '.[testing]' --upgrade
-	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm install
+	npm install
+	npm install --only=dev
 
 tsc:
-	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm run tsc
+	npm run tsc
 
 tscw:
-	cd ${PROJECT_PATH}/${PROJECT_NAME}/ngsrc && npm run tsc:w
+	npm run tsc:w
 
 runtests:
 	${VENV_PATH}/bin/python -m pytest -q

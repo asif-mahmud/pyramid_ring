@@ -2,6 +2,9 @@
  * System configuration for Angular samples
  * Adjust as necessary for your application needs.
  */
+/**
+ * TODO: Update System.js
+ */
 (function (global) {
     System.config({
         paths: {

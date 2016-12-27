@@ -1,6 +1,7 @@
 from pyramid.view import view_config
 from pyramid.httpexceptions import HTTPFound
 
+#TODO: Update routes
 
 @view_config(route_name='home_redirect')
 def redirect_to_home(request):
