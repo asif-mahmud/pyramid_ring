@@ -98,3 +98,4 @@ ENV/
 .idea/workspace.xml
 pyramid_ring.egg-info/
 .idea/
+examples/
