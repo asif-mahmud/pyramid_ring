@@ -1,7 +1,6 @@
 from pyramid.view import view_config
 from pyramid.httpexceptions import HTTPFound
-
-#TODO: Update routes
+import os
 
 @view_config(route_name='home_redirect')
 def redirect_to_home(request):
@@ -10,13 +9,12 @@ def redirect_to_home(request):
     )
 
 
-
 def includeme(config):
+    dist_dir = os.path.abspath(
+        os.path.abspath(__file__) + '/../../dist'
+    )
     config.add_static_view('static', 'static', cache_max_age=3600)
-    config.add_static_view('ngsrc', 'ngsrc', cache_max_age=3600)
-    config.add_static_view('ngmodules', '{{project_path}}/node_modules', cache_max_age=3600)
-    config.add_static_view('ngapps', '{{project_path}}/ng2apps', cache_max_age=3600)
-    config.add_static_view('dist', '{{project_path}}/dist', cache_max_age=3600)
+    config.add_static_view('dist', dist_dir, cache_max_age=3600)
 
     config.add_route('home_redirect', '/')
 

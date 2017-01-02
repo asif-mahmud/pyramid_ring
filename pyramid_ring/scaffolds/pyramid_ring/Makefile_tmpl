@@ -12,12 +12,6 @@ setup:
 	npm install
 	npm install --only=dev
 
-tsc:
-	npm run tsc
-
-tscw:
-	npm run tsc:w
-
 runtests:
 	${VENV_PATH}/bin/python -m pytest -q
 
@@ -37,3 +31,6 @@ downgrade:
 run:
 	cd ${PROJECT_PATH}
 	${VENV_PATH}/bin/pserve development.ini
+
+watch:
+	npm watch
