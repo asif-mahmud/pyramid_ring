@@ -6,11 +6,10 @@ A Pyramid scaffold that includes -
 
 1. [Pyramid](http://www.pylonsproject.org/) itself
 2. [SQLAlchemy](http://www.sqlalchemy.org/)
-3. [Angular 2](https://angular.io/)
-4. [Bootstrap](http://getbootstrap.com/)
-5. [Alembic](http://alembic.zzzcomputing.com/)
-6. [Jinja2](http://jinja.pocoo.org/docs/dev/)
-7. [JQuery](https://jquery.com/)
+3. [AngularJS](https://angularjs.org/)
+4. [Alembic](http://alembic.zzzcomputing.com/)
+5. [Jinja2](http://jinja.pocoo.org/docs/dev/)
+6. [SASS](http://sass-lang.com/)
 
 ##Key Features
 
@@ -60,7 +59,6 @@ A Pyramid scaffold that includes -
  | |-# basetemplates
  | |-# views
  | |-# security
- | |-# ngsrc
  | |-# scripts
  | |-# tests
  | |-+ routes.py - Includes all your view modules and a redirect view to home view.
@@ -71,6 +69,12 @@ A Pyramid scaffold that includes -
  | |-+ script.py.mako
  | |-+ env.py
  |
+ |-# sass - Your SASS source files
+ |
+ |-# ngapps - AngularJS apps
+ |
+ |-# scrips - helper and gulp scripts
+ |
  |-+ setup.py - Python distribution setup file.
  |-+ development.ini - Development environment config file.
  |-+ production.ini - Production environment config file.
@@ -79,19 +83,20 @@ A Pyramid scaffold that includes -
  |-+ MANIFEST.in
  |-+ CHANGES.txt
  |-+ Makefile - Provides some useful shortcut commands.
+ |-+ Gulpfile.js
+ |-+ package.json
+ |-+ karma.conf.js
 ```
 
 ##Usage of Makefile 
 
 The `Makefile` inside the `project folder` provides some easy shortcut commands-
 
-- `make setup` : Setup [Angular 2](https://angular.io/) and [Semantic UI](http://semantic-ui.com/). This command must be run once at the beginnng.
-- `make tsc` : Call `typescript compiler` to compile all angular src files.
-- `make tscw` : Call `typescript compiler` to watch for file changes and compile on the fly.
+- `make setup` : This command must be run once at the beginnng.
 - `make revision`: Make a database revision by [Alembic](http://alembic.zzzcomputing.com/).
 - `make upgrade` : Migrate your database to latest revision.
 - `make downgrade` : Migrate your database to a previous revision.
-- `make run` : Run `pserve` to serve local server.
+- `make run` : Run `pserve` to serve local server. Additionally it will start watching `SASS` sources and angular apps.
 - `make runtests` : Run `pytest` to test the project.
 
 ###Notes
@@ -116,6 +121,15 @@ inherit the infamous `Base` class. It provides the following class level attribu
 - `__tablename__` : You don't have to write `__tablename__` whenver you create a `Model`
 
 ##Version History
+
+##Version 2.0.0
+* Using `AngularJS` instead of `Angular 2`.
+* Using `SASS` source files for styling.
+* Added `gulp`.
+* Removed `Makefile` commands `tsc` and `tscw`. 
+* Removed `jQuery` and `bootstrap`.
+* `Jinja2` uses `{j` - `j}` syntax for variables to remove conflicts with `AngularJS`.
+* Added `.gitingnore` and `.jshintrc`.
 
 ##Version 1.5.0
 * Using `bootstrap` instead of `Semantic UI`.

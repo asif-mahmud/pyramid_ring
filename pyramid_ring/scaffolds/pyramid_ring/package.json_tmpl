@@ -21,7 +21,6 @@
     "gulp-autoprefixer": "*",
     "gulp-clean-css": "*",
     "gulp-ng-annotate": "*",
-    "gulp-watch": "*",
     "gulp-uglify": "*",
     "gulp-load-plugins": "*",
     "gulp-rename": "*",

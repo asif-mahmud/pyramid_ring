@@ -7,6 +7,12 @@
 pyramid.includes = pyramid_jinja2
 use = egg:{{project}}
 
+jinja2.variable_start_string = {j
+jinja2.variable_end_string = j}
+jinja2.trim_blocks = true
+jinja2.lstrip_blocks = true
+jinja2.autoescape = true
+
 pyramid.reload_templates = false
 pyramid.debug_authorization = false
 pyramid.debug_notfound = false
@@ -14,6 +20,7 @@ pyramid.debug_routematch = false
 pyramid.default_locale_name = en
 
 sqlalchemy.url = sqlite:///%(here)s/database/{{project}}.sqlite
+auth.secret = secrit
 
 [server:main]
 use = egg:waitress#main

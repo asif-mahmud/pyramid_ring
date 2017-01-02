@@ -15,6 +15,12 @@ pyramid.includes =
     pyramid_jinja2
     pyramid_debugtoolbar
 
+jinja2.variable_start_string = {j
+jinja2.variable_end_string = j}
+jinja2.trim_blocks = true
+jinja2.lstrip_blocks = true
+jinja2.autoescape = true
+
 sqlalchemy.url = sqlite:///%(here)s/database/{{project}}.sqlite
 auth.secret = secrit
 

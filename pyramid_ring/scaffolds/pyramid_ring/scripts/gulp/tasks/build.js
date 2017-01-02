@@ -5,6 +5,9 @@ var gulp = require('gulp');
 
 gulp.task('build', [
     /* Add your app build scripts here */
-    'build:homeApp'
+    'build:homeApp',
+
+    /* Build the stylesheet */
+    'build:sass'
     ]
 );
