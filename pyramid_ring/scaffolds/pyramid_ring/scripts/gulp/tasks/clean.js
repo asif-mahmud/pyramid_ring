@@ -2,14 +2,10 @@
  * Created by shimon on 1/2/17.
  */
 var gulp = require("gulp");
-var del = require("del");
+var rmdir = require("gulp-clean");
 var helper = require('../../helpers.js');
 
-gulp.task('clean', function (done) {
+gulp.task('clean', function () {
     var dist = helper.root('dist');
-    del([dist])
-        .then(function(paths) {
-            console.log('Removed : ', paths.join('\n'));
-    });
-    done();
+    return gulp.src(dist).pipe(rmdir());
 });

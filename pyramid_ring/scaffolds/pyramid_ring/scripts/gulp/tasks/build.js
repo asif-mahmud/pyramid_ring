@@ -3,5 +3,8 @@
  */
 var gulp = require('gulp');
 
-gulp.task('build', function () {
-});
+gulp.task('build', [
+    /* Add your app build scripts here */
+    'build:homeApp'
+    ]
+);

@@ -1,1 +1,13 @@
 {% extends 'basetemplates/layout-with-nav.jinja2' %}
+
+{% block JsFiles %}
+<script src="/dist/home/home-app.min.js"></script>
+{% endblock %}
+
+{% block NgApp %}
+ng-app="homeApp"
+{% endblock %}
+
+{% block PageContent %}
+<h1 ng-controller="HelloWorld">{{ '{{greet}}' }}</h1>
+{% endblock %}

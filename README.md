@@ -99,7 +99,7 @@ The `Makefile` inside the `project folder` provides some easy shortcut commands-
 `Updated in Version 1.2.0`: Setting the `Makefile` variables are done automatically. Just run `pcreate` from your 
 `python virtual environment`.
 
-Change the following variables to suite your project. `TODO:` Can this be automated ?
+Change the following variables to suite your project.
 
 - PROJECT_NAME : Project name
 - VENV_PATH : Points to the absolute or relative path to the virtual environment.
