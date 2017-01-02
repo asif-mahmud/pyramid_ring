@@ -21,16 +21,14 @@ revision:
 	${VENV_PATH}/bin/alembic revision --autogenerate -m "$$MSG"
 
 upgrade:
-	cd ${PROJECT_PATH}
-	${VENV_PATH}/bin/alembic upgrade head
+	cd ${PROJECT_PATH} && ${VENV_PATH}/bin/alembic upgrade head
 
 downgrade:
-	cd ${PROJECT_PATH}
-	${VENV_PATH}/bin/alembic downgrade -1
+	cd ${PROJECT_PATH} && ${VENV_PATH}/bin/alembic downgrade -1
 
 run:
-	cd ${PROJECT_PATH}
-	${VENV_PATH}/bin/pserve development.ini
+	cd ${PROJECT_PATH} && gulp watch &
+	cd ${PROJECT_PATH} &&  ${VENV_PATH}/bin/pserve development.ini
 
 watch:
-	npm watch
+	cd ${PROJECT_PATH} && npm watch
