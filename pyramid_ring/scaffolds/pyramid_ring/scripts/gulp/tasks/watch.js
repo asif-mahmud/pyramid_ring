@@ -2,5 +2,13 @@
  * Created by shimon on 1/2/17.
  */
 var gulp = require('gulp');
+var runSequence = require('gulp-run-sequence');
 
-gulp.task('watch', ['clean', 'copy:angular.js', 'build', 'watch:sass', 'watch:ngapps']);
+gulp.task('watch', ['clean'], function () {
+    runSequence([
+        'copy:angular.js',
+        'build',
+        'watch:sass',
+        'watch:ngapps'
+    ]);
+});

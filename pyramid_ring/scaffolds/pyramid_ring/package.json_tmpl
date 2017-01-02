@@ -28,7 +28,7 @@
     "gulp-replace": "*",
     "gulp-jshint": "*",
     "gulp-clean": "*",
-    "run-sequence": "*",
+    "gulp-run-sequence": "*",
     "jshint": "*",
     "jshint-stylish": "*",
     "jasmine-core": "*",
