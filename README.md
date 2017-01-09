@@ -52,7 +52,7 @@ A Pyramid scaffold that includes -
  |
  |-# database
  |
- |-# pyramid - Pyramid application code
+ |-# project_name - Pyramid application code
  | |
  | |-# models
  | |-# static
