@@ -52,7 +52,7 @@ A Pyramid scaffold that includes -
  |
  |-# database
  |
- |-# project_name
+ |-# pyramid - Pyramid application code
  | |
  | |-# models
  | |-# static
@@ -121,6 +121,10 @@ inherit the infamous `Base` class. It provides the following class level attribu
 - `__tablename__` : You don't have to write `__tablename__` whenver you create a `Model`
 
 ##Version History
+
+##Version 2.1.0
+* Updated `AngularJS` app structure.
+* Updated minifier script for angularjs. See the `ngapps/home`.
 
 ##Version 2.0.0
 * Using `AngularJS` instead of `Angular 2`.
